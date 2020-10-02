@@ -2,7 +2,7 @@
 My config for awesome window manager.
 
 Dependencies:
-termite awesome firefox dmenu htop xorg xorg-server xorg-xinit xorg-xsetroot xorg-xrandr fish
+openssh git neofetch picom nitrogen termite awesome firefox dmenu htop xorg xorg-server xorg-xinit xorg-xsetroot xorg-xrandr fish
 
 AUR:
 ttf-mononoki 
