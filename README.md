@@ -13,5 +13,5 @@ cd awesome
 
 mv config.fish ~/.config/fish
 
-
+clone https://github.com/Elv13/collision into your awesome dir
 
