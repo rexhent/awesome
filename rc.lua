@@ -34,6 +34,9 @@ do
         -- Make sure we don't go into an endless error loop
         if in_error then return end
         in_error = true
+--awful.key({ modkey, "Control" }, "=", function () lain.util.useless_gaps_resize(1) end),
+
+--awful.key({ modkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end),
 
         naughty.notify({ preset = naughty.config.presets.critical,
                          title = "Oops, an error happened!",
@@ -252,6 +255,10 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
+              awful.key({ modkey, "Control" }, "=", function () lain.util.useless_gaps_resize(1) end),
+
+awful.key({ modkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end),
+
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -563,6 +570,9 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 --
+--
+--
+beautiful.useless_gap = 8
 -- autostart
 
 awful.spawn.with_shell("picom &")
